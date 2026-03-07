@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Reports</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body class="dark-bg">
+
+<div class="container">
+    <h1>📊 Attendance Reports</h1>
+
+    <table class="report-table">
+        <tr>
+            <th>#</th>
+           
+            <th>Roll</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Status</th>
+        </tr>
+
+        {% for a in data %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+           
+            <td>{{ a.roll }}</td>
+            <td>{{ a.date }}</td>
+            <td>{{ a.time }}</td>
+            <td>{{ a.status }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="6">No attendance found</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="{% url 'dashboard' %}" class="btn btn-primary">⬅ Dashboard</a>
+</div>
+
+</body>
+</html>

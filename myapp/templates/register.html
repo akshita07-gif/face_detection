@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Student</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body class="dark-bg">
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">
+        <img src="{% static 'images/logo.png' %}" alt="Logo">
+        <span>Face Attendance</span>
+    </div>
+
+    <div class="nav-actions">
+        <a href="{% url 'dashboard' %}" class="nav-btn admin">Dashboard</a>
+    </div>
+</div>
+<div class="login-box">
+<h2>Register New Student</h2>
+
+<form class="form" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    Name:<br>
+    <input type="text" name="name" required><br><br>
+
+    Roll No:<br>
+    <input type="text" name="roll" required><br><br>
+
+    Class & Section:<br>
+    <input type="text" name="class_section" required><br><br>
+
+    Upload Image:<br>
+    <input type="file" name="image" required><br><br>
+
+    <button type="submit">Register</button>
+</form>
+</div>
+
+<br>
+<a href="{% url 'dashboard' %}">⬅ Back</a>
+
+</body>
+</html>

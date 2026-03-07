@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Attendance System</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<div class="navbar">
+    <div class="logo">
+        <img src="{% static 'images/logo.png' %}" alt="Logo">
+        <span>Face Attendance</span>
+    </div>
+
+    <div class="nav-actions">
+        
+<a href="{% url 'dashboard' %}" class="nav-btn admin">Admin</a>
+
+ 
+    </div>
+</div>
+
+<!-- ================= HERO SECTION ================= -->
+<div class="hero">
+    <h1>Smart Face Recognition Attendance</h1>
+    <p>
+        Mark attendance automatically using
+        <strong>AI-powered face recognition technology</strong>.
+    </p>
+
+    <div class="hero-buttons">
+        <a href="{% url 'register' %}" class="btn btn-primary">Register Student</a>
+        <a href="{% url 'mark' %}" class="btn btn-success">Mark Attendance</a>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="container">
+    <h2 style="text-align:center; margin-bottom:35px;">Key Features</h2>
+
+    <div class="features">
+        <div class="feature-card">
+            <h3>🎯 Face Recognition</h3>
+            <p>Accurate and fast face detection using advanced AI algorithms.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>📸 Live Camera Capture</h3>
+            <p>Attendance marked directly through webcam without manual entry.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>🗄️ Secure Database</h3>
+            <p>All student data and attendance records stored safely.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>⏱️ Real-Time Attendance</h3>
+            <p>Instant attendance marking with date and time.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>📊 Attendance Reports</h3>
+            <p>View and manage attendance records in an organized format.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>🔒 Admin Control</h3>
+            <p>Only authorized users can access and manage the system.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    © 2026 Face Recognition Attendance System | Final Year Project
+</div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<div class="dashboard">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2 class="side-title">Admin Panel</h2>
+
+        <a href="{% url 'dashboard' %}">🏠 Dashboard</a>
+        <a href="{% url 'register' %}">➕ Register Student</a>
+        <a href="{% url 'mark' %}">📸 Mark Attendance</a>
+        <a href="{% url 'reports' %}">📊 Attendance Reports</a>
+        <a href="{% url 'logout' %}" class="logout">🚪 Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+        <h1>Admin Dashboard</h1>
+        <p>Welcome to Face Attendance System</p>
+
+        <div class="stats">
+            <div class="stat-card">
+    <h3>👨‍🎓 Total Students</h3>
+    <p>{{ total_students }}</p>
+</div>
+
+<div class="stat-card">
+    <h3>📅 Today Attendance</h3>
+    <p>{{ today_attendance }}</p>
+</div>
+
+<div class="stat-card">
+    <h3>📊 Total Records</h3>
+    <p>{{ total_records }}</p>
+</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
