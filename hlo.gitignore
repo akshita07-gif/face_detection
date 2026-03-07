@@ -1,0 +1,71 @@
+# ====================
+# Django Specific
+# ====================
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Database Files
+db.sqlite3
+db.sqlite3-journal
+*.db
+*.db-journal
+
+# Media Files (User Uploaded)
+media/
+staticfiles/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+env.bak/
+venv.bak/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyc
+.pycache/
+
+# Django Specific
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# IDE Files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Testing
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Static Files (if using collectstatic)
+static/
+
+# Build Files
+dist/
+build/
+*.egg-info/
+
+# Secrets
+*.key
+*.pem
+secrets/
