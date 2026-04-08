@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -20,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-o0#9smxxs5pl=o=l@p8!k&!vtqzcr8*$ts!+i6#4i!$8vpiuxa'
+SECRET_KEY ='django-insecure-o0#9smxxs5pl=o=l@p8!k&!vtqzcr8*$ts!+i6#4i!$8vpiuxa'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -115,7 +116,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
+
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'myapp/static']
 
 MONGO_URI = "mongodb://localhost:27017/"
@@ -123,7 +125,7 @@ MONGO_DB_NAME = "face_attendance"
 
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / "media"
+MEDIA_ROOT =BASE_DIR / "media"
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
